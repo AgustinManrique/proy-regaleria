@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useMemo } from "react"
 import { products } from "@/data/products"
 import { useCart } from "@/hooks/use-cart"
