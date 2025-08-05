@@ -12,8 +12,6 @@ import { Instagram, Facebook } from "lucide-react"
 import Image from "next/image"
 
 export default function EcommercePage() {
-
-export default function EcommercePage() {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("all")
   const cart = useCart()
