@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 
 export function FloatingWhatsApp() {
-  const phoneNumber = "5492214363284" // Número sin espacios ni símbolos
+  const phoneNumber = "5492214363284"
   const message = "¡Hola! Me interesa conocer más sobre sus productos de aromaterapia 🌸"
 
   const handleWhatsAppClick = () => {
@@ -17,7 +17,7 @@ export function FloatingWhatsApp() {
       <Button
         onClick={handleWhatsAppClick}
         size="icon"
-        className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-green-500 hover:bg-green-600 text-white border-2 border-green-400 hover:border-green-500 h-14 w-14 hover:scale-110"
+        className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-green-500 hover:bg-green-600 text-white h-14 w-14 hover:scale-110 animate-pulse hover:animate-none"
         aria-label="Contactar por WhatsApp"
       >
         <svg
@@ -35,9 +35,9 @@ export function FloatingWhatsApp() {
         </svg>
       </Button>
 
-      {/* Tooltip */}
-      <div className="absolute bottom-16 left-0 bg-black/80 text-white text-xs px-2 py-1 rounded whitespace-nowrap opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      <div className="absolute bottom-16 left-0 bg-black/90 text-white text-xs px-3 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none shadow-lg">
         ¡Escribinos por WhatsApp!
+        <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
       </div>
     </div>
   )

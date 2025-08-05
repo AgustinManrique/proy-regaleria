@@ -32,24 +32,25 @@ export default function EcommercePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-40 w-full border-b bg-gradient-to-r from-primary/10 via-background to-secondary/10 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/95">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="relative h-10 w-10 overflow-hidden rounded-full">
+              <div className="relative h-12 w-12 overflow-hidden rounded-full bg-primary/10 p-1">
                 <Image
                   src="/images/logo.png"
                   alt="Roxana Aromaterapia Logo"
-                  width={40}
-                  height={40}
-                  className="object-cover"
+                  width={48}
+                  height={48}
+                  className="object-contain rounded-full"
                 />
               </div>
-              <h1 className="text-xl font-bold text-foreground">
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent dark:text-foreground">
+              <div>
+                <h1 className="text-xl font-bold text-primary">
                   Roxana Aromaterapia
-                </span>
-              </h1>
+                </h1>
+                <p className="text-xs text-muted-foreground">Aromaterapia Natural</p>
+              </div>
             </div>
             <div className="flex items-center gap-4">
               <ThemeToggle />
@@ -67,27 +68,33 @@ export default function EcommercePage() {
       </header>
 
       {/* Hero Section */}
-      <div className="w-full bg-gradient-to-r from-primary/20 to-secondary/20 py-12 mb-8">
+      <section className="w-full bg-gradient-to-br from-primary/5 via-background to-primary/10 py-16 mb-8">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-          <div className="relative w-40 h-40 md:w-64 md:h-64 flex-shrink-0 mx-auto md:mx-0">
-            <Image src="/images/logo.png" alt="Roxana Aromaterapia Logo" fill className="object-contain" priority />
+          <div className="relative w-48 h-48 md:w-72 md:h-72 flex-shrink-0 mx-auto md:mx-0 bg-white/50 rounded-full p-4 shadow-lg">
+            <Image 
+              src="/images/logo.png" 
+              alt="Roxana Aromaterapia Logo" 
+              fill 
+              className="object-contain rounded-full" 
+              priority 
+            />
           </div>
           <div className="text-center md:text-left flex-1">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              Tu regalería de confianza, <span className="text-primary">a la vuelta de casa</span>
-            </h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto md:mx-0 mb-6">
-              Ideas originales, productos artesanales y regalos para todos los gustos. Pasá, elegí y sorprendete.
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              Tu regalería de confianza, 
+              <span className="text-primary block md:inline"> a la vuelta de casa</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto md:mx-0 mb-8 leading-relaxed">
+              Descubrí nuestra hermosa colección de productos de aromaterapia. Aceites esenciales, difusores, velas y más para crear el ambiente perfecto en tu hogar.
             </p>
 
-            {/* Redes Sociales */}
             <div className="flex justify-center md:justify-start items-center gap-4">
               <span className="text-sm font-medium text-muted-foreground">Seguinos en:</span>
               <div className="flex gap-3">
                 <Button
                   variant="outline"
                   size="icon"
-                  className="bg-primary/10 border-primary/20 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
+                  className="bg-white/80 border-primary/20 hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 shadow-md"
                   asChild
                 >
                   <a
@@ -102,7 +109,7 @@ export default function EcommercePage() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="bg-primary/10 border-primary/20 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
+                  className="bg-white/80 border-primary/20 hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 shadow-md"
                   asChild
                 >
                   <a
@@ -117,7 +124,7 @@ export default function EcommercePage() {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="bg-primary/10 border-primary/20 hover:bg-primary/20 hover:scale-110 transition-all duration-300"
+                  className="bg-white/80 border-primary/20 hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 shadow-md"
                   asChild
                 >
                   <a
@@ -142,7 +149,7 @@ export default function EcommercePage() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Search Bar */}
       <div className="container mx-auto px-4 py-6">
@@ -155,7 +162,7 @@ export default function EcommercePage() {
 
       {/* Products Grid */}
       <main className="container mx-auto px-4 pb-8">
-        <div className="mb-6 p-4 rounded-lg bg-gradient-to-r from-primary/10 to-secondary/10">
+        <div className="mb-8 p-6 rounded-xl bg-gradient-to-r from-primary/5 to-primary/10 border border-primary/10">
           <h2 className="text-2xl font-semibold mb-2">
             {selectedCategory === "all"
               ? "Todos los productos"
@@ -178,7 +185,7 @@ export default function EcommercePage() {
                               : "Productos"}
           </h2>
           <p className="text-muted-foreground">
-            {filteredProducts.length} producto{filteredProducts.length !== 1 ? "s" : ""} encontrado
+            {filteredProducts.length} producto{filteredProducts.length !== 1 ? "s" : ""} disponible
             {filteredProducts.length !== 1 ? "s" : ""}
           </p>
         </div>
@@ -186,6 +193,7 @@ export default function EcommercePage() {
         {filteredProducts.length === 0 ? (
           <div className="text-center py-12 bg-muted/50 rounded-lg">
             <p className="text-lg text-muted-foreground">No se encontraron productos que coincidan con tu búsqueda.</p>
+            <p className="text-sm text-muted-foreground mt-2">Probá con otros términos o categorías.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

@@ -24,7 +24,7 @@ export function SearchBar({ onSearch, onCategoryChange, selectedCategory }: Sear
   }
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-lg shadow-sm">
+    <div className="w-full max-w-4xl mx-auto p-6 bg-white dark:bg-card rounded-xl shadow-lg border border-border/50">
       <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-4">
         <div className="flex-1 relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary h-4 w-4" />
@@ -33,12 +33,12 @@ export function SearchBar({ onSearch, onCategoryChange, selectedCategory }: Sear
             placeholder="Buscar productos..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10 border-primary/20 focus-visible:ring-primary"
+            className="pl-10 border-primary/20 focus-visible:ring-primary h-12 text-base"
           />
         </div>
 
         <Select value={selectedCategory} onValueChange={onCategoryChange}>
-          <SelectTrigger className="w-full sm:w-[200px] border-primary/20 bg-background dark:bg-background/80 text-foreground">
+          <SelectTrigger className="w-full sm:w-[220px] border-primary/20 bg-background h-12">
             <Filter className="h-4 w-4 mr-2 text-primary" />
             <SelectValue placeholder="Categoría" />
           </SelectTrigger>
@@ -51,7 +51,7 @@ export function SearchBar({ onSearch, onCategoryChange, selectedCategory }: Sear
           </SelectContent>
         </Select>
 
-        <Button type="submit" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
+        <Button type="submit" className="w-full sm:w-auto bg-primary hover:bg-primary/90 h-12 px-8 shadow-md hover:shadow-lg transition-all duration-300">
           Buscar
         </Button>
       </form>

@@ -58,10 +58,10 @@ export function Footer() {
                 <div>
                   <p className="text-sm font-medium">Email</p>
                   <a
-                    href="mailto:info@roxanaaromaterapia.com "
+                    href="mailto:info@roxanaaromaterapia.com"
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
-                    info@roxanaaromaterapia.com(pedir real)
+                    info@roxanaaromaterapia.com
                   </a>
                 </div>
               </div>
@@ -72,11 +72,11 @@ export function Footer() {
                 <div>
                   <p className="text-sm font-medium">Dirección</p>
                   <address className="text-sm text-muted-foreground not-italic">
-                    Calle 136, entre 530 y 531. Numero 124
+                    Calle 136 N° 124, entre 530 y 531
                     <br />
-                    📍La Plata, San Carlos
+                    San Carlos, La Plata
                     <br />
-                    Argentina
+                    Buenos Aires, Argentina
                   </address>
                 </div>
               </div>
