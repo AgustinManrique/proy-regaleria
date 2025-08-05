@@ -36,13 +36,13 @@ export default function EcommercePage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="relative h-12 w-12 overflow-hidden rounded-full bg-primary/10 p-1">
+              <div className="relative h-12 w-12 overflow-hidden rounded-full bg-primary/10">
                 <Image
-                  src="/images/logo.png"
+                  src="https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=100"
                   alt="Roxana Aromaterapia Logo"
                   width={48}
                   height={48}
-                  className="object-contain rounded-full"
+                  className="object-cover rounded-full"
                 />
               </div>
               <div>
@@ -72,10 +72,10 @@ export default function EcommercePage() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
           <div className="relative w-48 h-48 md:w-72 md:h-72 flex-shrink-0 mx-auto md:mx-0 bg-white/50 rounded-full p-4 shadow-lg">
             <Image 
-              src="/images/logo.png" 
+              src="https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400" 
               alt="Roxana Aromaterapia Logo" 
               fill 
-              className="object-contain rounded-full" 
+              className="object-cover rounded-full" 
               priority 
             />
           </div>

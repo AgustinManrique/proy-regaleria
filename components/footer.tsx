@@ -12,7 +12,7 @@ export function Footer() {
             <div className="flex items-center gap-2">
               <div className="relative h-10 w-10 overflow-hidden rounded-full">
                 <Image
-                  src="/images/logo.png"
+                  src="https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=100"
                   alt="Roxana Aromaterapia Logo"
                   width={40}
                   height={40}
