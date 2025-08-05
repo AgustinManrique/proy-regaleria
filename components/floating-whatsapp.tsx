@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 
 export function FloatingWhatsApp() {
@@ -17,7 +15,7 @@ export function FloatingWhatsApp() {
       <Button
         onClick={handleWhatsAppClick}
         size="icon"
-        className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-green-500 hover:bg-green-600 text-white h-14 w-14 hover:scale-110 animate-pulse hover:animate-none"
+        className="rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-green-500 hover:bg-green-600 text-white h-14 w-14 hover:scale-110"
         aria-label="Contactar por WhatsApp"
       >
         <svg

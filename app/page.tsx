@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useMemo } from "react"
 import { products } from "@/data/products"
 import { useCart } from "@/hooks/use-cart"
@@ -12,6 +10,8 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Instagram, Facebook } from "lucide-react"
 import Image from "next/image"
+
+export default function EcommercePage() {
 
 export default function EcommercePage() {
   const [searchQuery, setSearchQuery] = useState("")

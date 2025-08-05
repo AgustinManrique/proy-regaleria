@@ -1,5 +1,3 @@
-"use client"
-
 import type { Product } from "@/types/product"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
